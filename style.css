@@ -1,0 +1,49 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 60px;
+  margin-left: 45%;
+  /*margin-top: 17%;*/
+}
+
+
+h4{
+  margin-left: 45%;
+  margin-top:17%; 
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: grey;
+  border-radius: 50px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 40px;
+  left: 7px;
+  bottom: 10px;
+  transition: .4s;
+  border-radius: 60px;
+  background-color: white;
+  
+}
+
+input:checked  + .slider {
+  background-color: #77c11e;
+}
+
+input:checked + .slider:before {
+  transform: translateX(45px);
+}
+
+input[type="checkbox"]{
+  display: none;
+}
